@@ -1,2 +1,3 @@
 # kind-alyson
-Alyson's kindess app
+
+Alyson's kindness app
