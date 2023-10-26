@@ -1,0 +1,39 @@
+body {
+  background: rgba(37, 11, 59, 1);
+  color: white;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+#splash {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 2s forwards splash;
+}
+#app {
+  width: 100vw;
+  height: 100vh;
+  animation: 2s forwards app-init;
+}
+@keyframes splash {
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes app-init {
+  from {
+    display: none;
+  }
+  to {
+    display: flex;
+  }
+}
