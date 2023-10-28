@@ -2,6 +2,10 @@ const floatingHearts = document.querySelector('.floating-hearts');
 floatingHearts.style.position = 'relative';
 floatingHearts.style.top = '-50%';
 floatingHearts.style.transform = 'scale(0.5)';
+const liftedHeart = document.querySelector('.lifted-heart');
+liftedHeart.style.position = 'relative';
+liftedHeart.style.top = '-50%';
+liftedHeart.style.transform = 'scale(0.5)';
 setTimeout(startHearts, 2000);
 
 let heartNum = 0;
@@ -36,6 +40,8 @@ function startHearts() {
   }
   setTimeout(() => {
     floatingHearts.innerHTML = '';
+  }, 2000 + 250 * 25);
+  setTimeout(() => {
     const heart = document.createElement('img');
     heart.src = 'assets/heart-icon-48.png';
     heart.alt = 'heart';
@@ -44,7 +50,7 @@ function startHearts() {
     heart.style.top = '50%';
     heart.style.left = '50%';
     heart.style.transform = 'translate(-50%, -50%)';
-    floatingHearts.appendChild(heart);
+    liftedHeart.appendChild(heart);
     heart.animate(
       [
         { opacity: 0.5, offset: 0 },
@@ -56,5 +62,5 @@ function startHearts() {
       ],
       { duration: 2000, fill: 'forwards' }
     );
-  }, 2000 + 250 * 25);
+  }, 500 + 250 * 25);
 }
