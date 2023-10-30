@@ -6,13 +6,13 @@ const liftedHeart = document.querySelector('.lifted-heart');
 liftedHeart.style.position = 'relative';
 liftedHeart.style.top = '-50%';
 liftedHeart.style.transform = 'scale(0.5)';
-const numHearts = 15;
+const numHearts = 10;
 setTimeout(startHearts, 2000);
 
 let heartNum = 0;
 function startHearts() {
   document.querySelector('#splash').remove();
-  while (heartNum < 15) {
+  while (heartNum < numHearts) {
     // horTranslate will be used with 'vw' in css for percentage of view width
     setTimeout(() => {
       const horTranslate = 0.75 * (Math.random() - 0.5);
